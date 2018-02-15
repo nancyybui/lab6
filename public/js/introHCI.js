@@ -14,6 +14,18 @@ function initializePage() {
 	$('#colorBtn').click(randomizeColors);
 }
 
+function addProject(result) {
+  var projectHTML = '<a href="#" class="thumbnail">' +
+    '<img src="' + result['image'] + '" class="img">' +
+    '<p>' + result['title'] + '</p>' +
+    '<p><small>' + result['date'] +
+    '</small></p></a>'; 
+}
+
+function callback(){
+	console.log(result);
+}
+
 /*
  * Make an AJAX call to retrieve project details and add it in
  */
